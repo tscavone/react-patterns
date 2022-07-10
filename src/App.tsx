@@ -11,7 +11,10 @@ export function App() {
         }}
       >
         <Link to="/dnl">Dynamic Nested List</Link> |{" "}
-        <Link to="/oe">Other Example</Link>
+        <Link to="/">Dynamic Nested List</Link> |{" "}
+        <Link to="/oe">Other Example</Link>| {""}
+        <Link to="/onecolumn">one column</Link>| {""}
+        <Link to="/rte">rich text edit</Link>
       </nav>
     </div>
   );

@@ -1,0 +1,118 @@
+chatapi.txt
+
+Highlevel-
+--------  
+
+clarifying questions:
+- how many users  
+- media?
+- conversation model <limit>
+- what is being poste d, just text?
+- threads?
+
+
+  server 
+  websockets 
+    PRO
+      - full-duplex async communcation = responsive
+      - probably less resource intensive
+    CONS
+      - debugging
+      - proxies and firewalls
+      - trickier auth
+
+    
+REST:
+<API_BASE>/v1/<object>
+200 	Success Request
+202 	Accepted
+400 	Bad Request
+401 	Unauthenticated Request
+403 	Forbidden
+404 	Not Found
+500 	Internal Server Request
+503 	Service Unavailable
+            
+
+
+
+
+
+Data model
+----------
+message 
+  id
+  Text
+  conversation_id
+  sender
+  receiver
+  sentTime
+  deletedTime
+  mediaUrl
+  <seen id list?>
+
+POST /me.com/v1/messages 
+GET /.../messages/<id>
+GET /.../messages?userId, sentBefore, sentAfter, <paging>, 
+
+
+  
+conversation
+  id
+  name
+
+POST /.../conversations
+  {members, creators, }
+
+user
+  id 
+  first
+  last
+  email
+
+connection
+  id
+  nickname
+  created
+  accepted?
+  acceptedDate
+  deleted
+
+connectionRequest
+  id
+  sourceId
+  targetId
+  created
+  deleted
+  accepted
+
+media
+  id
+  format 
+  filesize
+  url
+
+
+
+POST api.me.com/v1/user  - create user
+GET api.me.com/v1/user/id
+
+GET 
+
+polling - 
+  degrading polling
+  still there?
+  cache that writes to localstorage then the database after some point
+
+baseline
+    authentication
+    text field - rich text/ html?
+    contacts 
+    send a message
+    receive / display a message 
+    notifications
+    display of past messages 
+
+extra 
+   media server
+

@@ -1,13 +1,43 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.one-column-container .header {
+  grid-area: oneColumnHeader;
+  background-color: darkgray;
+}
+
+.one-column-container .aside {
+  grid-area: oneColumnAside;
+  background-color: #d6cfcf;
+}
+
+.one-column-container .body {
+  grid-area: oneColumnBody;
+  background-color: #a2a0a0;
+}
+
+.one-column-container .footer {
+  grid-area: oneColumnFooter;
+  background-color: #d7d0d0ba;
+}
+
+.one-column-container {
+  display: grid;
+  grid-template-columns: 50px 50px 50px 50px;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "oneColumnHeader oneColumnHeader oneColumnHeader oneColumnHeader"
+    "oneColumnAside oneColumnBody oneColumnBody oneColumnBody"
+    "oneColumnFooter oneColumnFooter oneColumnFooter oneColumnFooter";
 }
