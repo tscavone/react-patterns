@@ -13,7 +13,9 @@ export function App() {
         <Link to="/dnl">Dynamic Nested List</Link> |{" "}
         <Link to="/">Dynamic Nested List</Link> |{" "}
         <Link to="/oe">Other Example</Link>| {""}
+        <Link to="/dl">Data List</Link>| {""}
         <Link to="/onecolumn">one column</Link>| {""}
+        <Link to="/login">login</Link>| {""}
         <Link to="/rte">rich text edit</Link>
       </nav>
     </div>

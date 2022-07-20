@@ -1,0 +1,32 @@
+.one-column-container .header {
+  grid-area: oneColumnHeader;
+  background-color: darkgray;
+  height: 100px;
+}
+
+.one-column-container .aside {
+  grid-area: oneColumnAside;
+  background-color: #d6cfcf;
+}
+
+.one-column-container .body {
+  grid-area: oneColumnBody;
+  background-color: #a2a0a0;
+  height: 600px;
+}
+
+.one-column-container .footer {
+  grid-area: oneColumnFooter;
+  background-color: #d7d0d0ba;
+  height: 100px;
+}
+
+.one-column-container {
+  display: grid;
+  grid-template-columns: 200px 200px 200px 200px;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "oneColumnHeader oneColumnHeader oneColumnHeader oneColumnHeader"
+    "oneColumnAside oneColumnBody oneColumnBody oneColumnBody"
+    "oneColumnFooter oneColumnFooter oneColumnFooter oneColumnFooter";
+}

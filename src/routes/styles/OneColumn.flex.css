@@ -1,0 +1,30 @@
+.one-column-container .header {
+  background-color: darkgray;
+  height: 100px;
+}
+
+.one-column-container .aside {
+  background-color: #d6cfcf;
+  width: 150px;
+}
+
+.one-column-container .body {
+  background-color: #a2a0a0;
+  height: 600px;
+  width: 650px;
+}
+
+.one-column-container .footer {
+  background-color: #d7d0d0ba;
+  height: 100px;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+}
+.one-column-container {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+}
